@@ -26,5 +26,8 @@ export class AdminuserComponent implements OnInit {
   public Block(Id:number){
     this._service.Block(Id).subscribe(k=>k=this.msg)
   }
+  public UnBlock(Id:number){
+    this._service.UnBlock(Id).subscribe(k=>k=this.msg)
+  }
 
 }

@@ -20,35 +20,36 @@
 							<table>
 									<tr>
 										<td>UserName</td>
-										<td><input type="text" name="name" id="" [(ngModel)]="item.name"></td>
+										<td><input type="text" name="name" [(ngModel)]="item.name"></td>
 									</tr>
 									<tr>	
 										
-											<td><label for="email1" > <b> Email ID </b> </label> </td>
-													 <td> <input type ="text" #email1="ngModel" placeholder="Enter Email" name="emailID" id="" [(ngModel)]="item.emailID" required email /> </td>
-													  <!-- <div  *ngIf="email1.errors && (email1.dirty || email1.touched)">
-														  <p  *ngIf="email1.errors.required"> * Email ID is required </p> 
-														  <p  *ngIf="email1.errors.email"> * Email ID is not valid </p>
-														</div>
-													 -->
+											<td> Email ID </td>
+													 <td> <input type ="text" #email="ngModel" name="emailID" [(ngModel)]="item.emailID" required email /> </td>
+													 <div  *ngIf="email.errors && (email.dirty || email.touched)">
+															<p  *ngIf="email.errors.required"> * Email is required </p> 
+															<p  *ngIf="email.errors.email"> * Email is not valid </p> 
+														
+														  </div>
+														
 										</tr>
 										
 									<tr>
 										<td>Mobilenumber</td>
-										<td><input type="number" name="mobileNum" id="" [(ngModel)]="item.mobilenumber"></td>
+										<td><input type="number" name="mobileNum" [(ngModel)]="item.mobilenumber"></td>
 									</tr>
 									<tr>
 											<td>  PassWord </td>
-											<td><input type ="password"  #password="ngModel" placeholder="Enter Password" name="pwd" id="" [(ngModel)]="item.password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/> </td>
-											<!-- <div  *ngIf="password.errors && (password.dirty || password.touched)">
+											<td><input type ="password"  #password="ngModel" name="pwd" [(ngModel)]="item.password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/> </td><br>
+											<div  *ngIf="password.errors && (password.dirty || password.touched)">
 												<p  *ngIf="password.errors.required"> * Password is required </p> 
 												<p  *ngIf="password.errors.pattern"> PassWord Pattern doesnot match </p>
-											  </div> -->
+											  </div>
 									</tr>
 								
 									<tr>
 										<td>Active</td>
-										<td><input type="checkbox" name="act" id="" [(ngModel)]="item.active"></td>
+										<td><input type="checkbox" name="act" [(ngModel)]="item.active"></td>
 									</tr>
 									
 									

@@ -23,13 +23,15 @@
 										<td><input type="text" name="mentorname"  [(ngModel)]="item.mentorName"></td>
 									</tr>
 								<tr>	
-										
-									<td>Email ID</td>
-											  <input type ="text"  placeholder="Enter Email" name="emailid"  [(ngModel)]="item.mEmailID" /> <br>
-											  <!-- <div  *ngIf="email1.errors && (email1.dirty || email1.touched)">
-												  <p  *ngIf="email1.errors.required"> * Email ID is required </p> 
-												  <p  *ngIf="email1.errors.email"> * Email ID is not valid </p>
-												</div> -->
+										<td> Email ID </td>
+													 <td> <input type ="text" #email="ngModel" name="emailID" [(ngModel)]="item.mEmailID" required email /> </td>
+													 <div  *ngIf="email.errors && (email.dirty || email.touched)">
+															<p  *ngIf="email.errors.required"> * Email is required </p> 
+															<p  *ngIf="email.errors.email"> * Email is not valid </p> 
+														
+														  </div>
+											
+											
 											
 								</tr>
 									<tr>
@@ -54,15 +56,16 @@
 									</tr>
 									<tr>
 											<td>  PassWord </td>
-											<td><input type ="password" placeholder="Enter Password" name="pwd"  [(ngModel)]="item.password" /> </td>
-											<!-- <div  *ngIf="password.errors && (password.dirty || password.touched)">
+											<td><input type ="password"  #password="ngModel" name="pwd"  [(ngModel)]="item.password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/> </td>
+										 <div  *ngIf="password.errors && (password.dirty || password.touched)">
 												<p  *ngIf="password.errors.required"> * Password is required </p> 
 												<p  *ngIf="password.errors.pattern"> PassWord Pattern doesnot match </p>
-											  </div> -->
+											  </div>
+									
 									</tr>
 									<tr>
 										<td>Active</td>
-										<td><input type="checkbox" name="act" id="" [(ngModel)]="item.active"></td>
+										<td><input type="checkbox" name="act"  [(ngModel)]="item.active"></td>
 									</tr>
 									
 									

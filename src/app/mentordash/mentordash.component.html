@@ -1,7 +1,18 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
 <div class="whole">
         Welcome {{UserName}}!
-        <button type="submit" (click)="add()">Edit Profile</button>
+        <button type="submit" (click)="add()" style="background-color: black;color: blanchedalmond;">Edit Profile</button>
         <div *ngIf="addclick==1">
+            <form style="border-width: 2px;width: max-content;height: max-content;">
                 <table>
                         <tr>
                             <td>MentorName</td>
@@ -52,11 +63,14 @@
                         
                         
                         
-                        <tr><td><button type="submit" (click)="Update()">Edit</button></td></tr>
+                        <tr><td><button type="submit" (click)="Update()" style="background-color: black;color: blanchedalmond;width:400px;">Edit</button></td></tr>
                         </table>
+                        </form>
        </div>  
-       <button type="submit" (click)="MentorCurTrainings()"> Current Trainings</button>
+       <button type="submit" (click)="MentorCurTrainings()"style="background-color: black;color: blanchedalmond;"> Current Trainings</button>
+       <form style="border-width: 2px;width: max-content;height: max-content;">
        <table>
+       
         <thead>
                 <tr>
                     <th>Training-ID</th>
@@ -107,5 +121,8 @@
     
     </tr>
     </tbody>
-    </table>    
+    </table>   
+    </form> 
        </div>
+       </body>
+       </html>

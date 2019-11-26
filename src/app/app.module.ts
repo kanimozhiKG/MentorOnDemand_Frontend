@@ -3,15 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MentorModule } from './mentor/mentor.module';
-import {UserModule}from'./user/user.module';
 import { LoginComponent } from './shared-module/login/login.component';
 import { UsersignupComponent } from './shared-module/usersignup/usersignup.component';
-import { MentloginComponent } from './shared-module/mentlogin/mentlogin.component';
 import { MentsignupComponent } from './shared-module/mentsignup/mentsignup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ConfirmpassDirective } from './shared-module/confirmpass.directive';
 import { MentorService } from '../app/service/mentor.service';
 import { UserService } from './service/user.service';
 import { AdminuserComponent } from './adminuser/adminuser.component';
@@ -32,9 +28,7 @@ import { MentordashComponent } from './mentordash/mentordash.component';
     AppComponent,
     LoginComponent,
     UsersignupComponent,
-    MentloginComponent,
     MentsignupComponent,
-    ConfirmpassDirective,
     AdminuserComponent,
     AdminmentorComponent,
     AdmindashComponent,
@@ -43,8 +37,6 @@ import { MentordashComponent } from './mentordash/mentordash.component';
   ],
   imports: [
     BrowserModule,
-    UserModule,
-      MentorModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),

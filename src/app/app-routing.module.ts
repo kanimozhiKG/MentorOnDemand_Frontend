@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './shared-module/login/login.component';
 import{UsersignupComponent}from'./shared-module/usersignup/usersignup.component';
-import { MentloginComponent } from './shared-module/mentlogin/mentlogin.component';
+//import { MentloginComponent } from './shared-module/mentlogin/mentlogin.component';
 import { MentsignupComponent } from './shared-module/mentsignup/mentsignup.component';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { AdminuserComponent } from './adminuser/adminuser.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'usersignup',component:UsersignupComponent},
   {path:'search',component:SearchComponent},
-  {path:'mlogin',component:MentloginComponent},{path:'msignup',component:MentsignupComponent}
+  {path:'msignup',component:MentsignupComponent}
 ,{path:'admindash',component:AdmindashComponent,children:[
   {path:'adminuser',component:AdminuserComponent},
   {path:'adminmentor',component:AdminmentorComponent},

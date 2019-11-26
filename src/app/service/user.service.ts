@@ -30,5 +30,8 @@ export class UserService {
   public Block(id:Number){
     return this._client.put(this.path+'/BlockUser/'+id,id);
   }
+  public UnBlock(id:Number){
+    return this._client.put(this.path+'/UnBlockUser/'+id,id);
+  }
 
 }

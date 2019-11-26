@@ -18,7 +18,8 @@ table, th, td {
 								 <th>Password</th>
 								 <th>Active</th>
 								 <th>Block</th>
-								 <th>Delete</th>
+								 <th>UnBlock</th>								 
+                                  <th>Delete</th>
 							 </tr>
 						 </thead>
 	   
@@ -43,6 +44,7 @@ table, th, td {
 						{{item.active}}
 					</td>
 					<td> <button type="submit" (click)="Block(item.userId)">Block</button></td>
+					<td> <button type="submit" (click)="UnBlock(item.userId)">UnBlock</button></td>
 					<td> <button type="submit" (click)="Delete(item.userId)">Delete</button></td>
 				 </tr>
 	 

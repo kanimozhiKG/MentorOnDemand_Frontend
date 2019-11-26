@@ -208,9 +208,9 @@ input.email, input.text.w3lpass {
 button {
   font-size: .9em;
   color: #fff;
-  background:darkred;
+  background:black;
   outline: none;
-  border: 1px solid darkred;
+  border: 1px solid cornsilk;
   cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
@@ -259,7 +259,7 @@ button:hover {
 }
 
 input.checkbox {
-  background: darkred;
+  background:black;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
